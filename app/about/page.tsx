@@ -155,7 +155,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <Globe className="w-12 h-12 text-orange-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Innovation First</h3>
@@ -268,7 +268,7 @@ export default function AboutPage() {
           <TechStackReveal />
         </section>
 
-        <section className="py-16">
+        <section className="py-16" id="full-timeline">
           <TimelineDemo />
         </section>
 
@@ -285,7 +285,7 @@ export default function AboutPage() {
               create lasting value and drive meaningful business transformation.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <Users className="w-12 h-12 text-orange-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Dedicated Teams</h3>

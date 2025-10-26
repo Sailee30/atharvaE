@@ -20,6 +20,8 @@ import {
 import BentoGridDemo from "@/components/bento-grid-demo"
 import { HoverEffect } from "@/components/ui/card-hover-effect"
 import Link from "next/link";
+// Replace the entire 'services' array in your app/services/page.tsx with this:
+
 const services = [
   {
     title: "Custom Software Development",
@@ -46,36 +48,36 @@ const services = [
     title: "Cloud Migration & Operations",
     description:
       "Cloud strategy (AWS / GCP / Azure), Lift-and-shift / re-architect, Infra as Code, Cost optimization, Managed cloud ops.",
-    link: "/services/Cloud-Migration",
-    icon: <Smartphone className="w-8 h-8 text-orange-500" />,
+    link: "/services/cloud-migration",
+    icon: <Cloud className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "DevOps & CI/CD Automation",
     description:
       "CI/CD pipelines, Containerization (Docker / Kubernetes), Monitoring & observability, Automated deployments, IaC (Terraform/CloudFormation).",
-    link: "/services/mobile-web",
-    icon: <Smartphone className="w-8 h-8 text-orange-500" />,
+    link: "/services/devops-cicd",
+    icon: <Zap className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "Data Engineering & Analytics",
     description:
       "ETL / data pipelines, Data lakes/warehouses, BI dashboards, Real-time streaming, Data governance.",
-    link: "/services/mobile-web",
-    icon: <Smartphone className="w-8 h-8 text-orange-500" />,
+    link: "/services/data-engineering",
+    icon: <Globe className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "API Design & Integrations",
     description:
       "REST / GraphQL APIs, Third-party integrations (payment, shipping, auth), API docs & SDKs, Webhooks.",
-    link: "/services/mobile-web",
-    icon: <Smartphone className="w-8 h-8 text-orange-500" />,
+    link: "/services/api-design",
+    icon: <Code className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "QA & Test Automation",
     description:
       "Manual QA, Automation frameworks (Selenium, Playwright), Performance & security testing, CI test integration.",
-    link: "/services/mobile-web",
-    icon: <Smartphone className="w-8 h-8 text-orange-500" />,
+    link: "/services/qa-testing",
+    icon: <Shield className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "SaaS Product Development",
@@ -95,63 +97,63 @@ const services = [
     title: "Growth Marketing",
     description:
       "Data-driven marketing strategies, conversion optimization, and growth hacking techniques that accelerate customer acquisition.",
-    link: "/services/social-marketing",
+    link: "/services/growth-marketing",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "SEO & Technical SEO",
     description:
       "Audit, on-page, off-page, site architecture, schema, speed improvements.",
-    link: "/services/social-marketing",
+    link: "/services/seo",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "SEM & Paid Advertising",
     description:
       "Google Ads, Bing, Display, Shopping ads, performance campaigns.",
-    link: "/services/social-marketing",
+    link: "/services/sem-ads",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "Social Media Marketing",
     description:
       "Strategy, community management, creatives, paid social.",
-    link: "/services/social-marketing",
+    link: "/services/social-media",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "Email Marketing & Automation",
     description:
       "Campaigns, nurture flows, transactional emails, deliverability.",
-    link: "/services/social-marketing",
+    link: "/services/email-marketing",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "Content Marketing",
     description:
       "Blogging, long-form content, video scripts, content calendars.",
-    link: "/services/social-marketing",
+    link: "/services/content-marketing",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "Conversion Rate Optimization (CRO)",
     description:
       "A/B testing, UX changes, funnels, heatmaps.",
-    link: "/services/social-marketing",
+    link: "/services/cro",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "Analytics & Reporting",
     description:
       "GA4 setup, dashboards, event tracking, KPI reporting.",
-    link: "/services/social-marketing",
+    link: "/services/analytics",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
   {
     title: "Marketing Automation",
     description:
       "HubSpot/ActiveCampaign/other setups, lead scoring, workflows.",
-    link: "/services/Marketing-Automation",
+    link: "/services/marketing-automation",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
   },
 ]
@@ -197,7 +199,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/10 border border-orange-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl font-bold text-orange-400">1</span>
@@ -256,7 +258,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:scale-105 hover:-translate-y-2 transition-all duration-300 group">
               <Clock className="w-12 h-12 text-orange-500 mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold mb-3">On-Time Delivery</h3>

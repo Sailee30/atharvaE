@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { EB_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import ModernNavbar from "@/components/modern-navbar"
@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   generator: "v0.app",
 }
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,7 +41,7 @@ export default function RootLayout({
           <CustomCursor />
           <ModernNavbar />
         </Suspense>
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
         <Analytics />
       </body>
