@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
   ArrowRight,
@@ -159,6 +160,10 @@ const services = [
 ]
 
 export default function ServicesPage() {
+  const [showAll, setShowAll] = useState(false)
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024
+  const displayedServices = (showAll || !isMobile) ? services : services.slice(0, 6)
+  
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -185,7 +190,18 @@ export default function ServicesPage() {
           </div>
 
           <div className="relative">
-            <HoverEffect items={services} className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" />
+            <HoverEffect items={displayedServices} className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" />
+          </div>
+
+          {/* View More Button - Mobile Only */}
+          <div className="flex justify-center mt-12 lg:hidden">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="group relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg text-lg font-semibold flex items-center gap-2 backdrop-blur-sm border border-orange-400/30 shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105"
+            >
+              {showAll ? "Show Less" : "View More"}
+              <ArrowRight className={`w-5 h-5 transition-transform duration-300 ${showAll ? "rotate-90" : ""}`} />
+            </button>
           </div>
         </div>
       </section>
@@ -199,7 +215,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/10 border border-orange-500/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl font-bold text-orange-400">1</span>
@@ -258,7 +274,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:scale-105 hover:-translate-y-2 transition-all duration-300 group">
               <Clock className="w-12 h-12 text-orange-500 mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold mb-3">On-Time Delivery</h3>
