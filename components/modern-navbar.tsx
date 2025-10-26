@@ -45,7 +45,7 @@ const ModernNavbar = () => {
       </NavBody>
 
       <MobileNav>
-        <MobileNavHeader>
+        <MobileNavHeader className="justify-between">
           <MobileNavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
         </MobileNavHeader>
         <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)} className="px-4">
