@@ -180,7 +180,7 @@ export default function MobileWebPage() {
             <p className="text-lg text-white/70">Comprehensive mobile and web development solutions</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon
               return (
@@ -208,7 +208,7 @@ export default function MobileWebPage() {
             <p className="text-lg text-white/70">From concept to deployment across all platforms</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
@@ -230,7 +230,7 @@ export default function MobileWebPage() {
             <p className="text-lg text-white/70">Modern frameworks and tools for mobile and web development</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {techStack.map((tech, index) => (
               <div
                 key={index}
